@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <root level="ERROR"/>
+    <logger name="org.apache.mahout" level="ERROR"/>
+
+    <!-- Se quiser logs específicos para sua aplicação -->
+    <logger name="com.recomendacao" level="INFO"/>
+
+    <!-- Configurar appender apenas para erros importantes -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="ERROR">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>
